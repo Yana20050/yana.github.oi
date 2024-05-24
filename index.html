@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Моє Портфоліо</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Prata:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
 <link rel="icon" href="images/icon.png" type="image/x-icon">
@@ -12,137 +13,6 @@
 <meta property="og:description" content="Відправляйтеся у подорож у світ дизайну та креативності">
 <meta property="og:image" content="images/og-image.jpg">
 <meta property="og:type" content="website">
-
-<style>
-body {
-font-family: 'Play', sans-serif;
- margin: 0;
-padding: 0;
-overflow-x: hidden;
- }
-.navbar-dark .navbar-nav .nav-link {
-color: #ffffff;
-}
-header {
- position: relative;
-text-align: center;
-color: #ffffff;
-background-color: #515d65;
-}
-footer {
-background-color: #87CEFA;
-color: #ffffff;
-padding: 20px 0;
-text-align: center;
-}
-header img {
-width: 100%;
-height: auto;
-}
-header .overlay {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: rgba(31, 29, 31, 0.5);
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
- color: #ffffff;
- animation: fadeIn 2s ease-in-out;
- }
-@keyframes fadeIn {
-from { opacity: 0; }
-to { opacity: 1; }
-}
-.section-title {
-margin-top: 60px;
-margin-bottom: 30px;
- animation: slideIn 2s ease-in-out;
-}
- @keyframes slideIn {
-from { transform: translateY(20px); opacity: 0; }
-to { transform: translateY(0); opacity: 1; }
-}
-@keyframes rotate {
-from {
-transform: rotate(0deg);
-}
-to {
-transform: rotate(360deg);
-}
- }
-.welcome-animation {
-animation: fadeIn 2s ease-in-out;
- }
-.rotate-animation {
- animation: rotate 5s linear infinite;
-}
-.about-image {
-width: 100%;
-transition: transform 0.3s;
-}
-.about-image:hover {
- transform: scale(1.28);
- }
-.gallery-container {
-position: relative;
-width: 100%;
-overflow: hidden;
- text-align: center;
- }
-.gallery {
-display: flex;
-transition: transform 0.5s ease;
-}
- .gallery-photo {
-width: 50%;
-flex-shrink: 0;
-transition: transform 0.3s;
-}
-.gallery-photo:hover {
-transform: scale(1.1);
-cursor: pointer;
-}
-.arrow {
-position: absolute;
-top: 50%;
- transform: translateY(-50%);
- font-size: 2rem;
-color: #9094a7;
-cursor: pointer;
-user-select: none;
- z-index: 10;
-}
-.arrow-left {
-left: 10px;
-}
-.arrow-right {
-right: 10px;
-}
-.architecture-image {
-width: 100%;
-max-width: 60%;
-}
-.btn {
-animation: fadeIn 1.5s ease-in-out;
-}
-.social-icons img {
-width: 35px;
-margin-right: 10px;
-}
-.zoom-controls {
-margin-top: 10px;
-}
-.zoom-controls button {
-margin: 5px;
-padding: 10px;
-font-size: 16px;
-}
-</style>
-
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -194,8 +64,8 @@ font-size: 16px;
 <div class="col-md-4">
 <a href="#"><img src="images/129 (1).jpg" alt="Фото 3" class="img-fluid about-image" style="max-width: 100%; height: auto;"></a>
 </div>
-        
 </section>
+
 <section id="gallery">
 <div class="container gallery-container">
 <h2 class="section-title">Фотогалерея</h2>
@@ -223,12 +93,14 @@ font-size: 16px;
 <span class="arrow arrow-right">&#9654;</span>
 </div>
 </section>
+
 <section id="history" style="background-color: rgb(144, 148, 167);">
 <div class="container">
 <h2 class="section-title text-center">Коледж</h2>
 <div class="row">
 <div class="col-md-6">
 <p>Коледж імені Івана Труша, де я зараз навчаюся, є справжньою перлиною в світі декоративного мистецтва. Тут панує атмосфера творчості та натхнення, а викладачі є справжніми майстрами своєї справи. Програма навчання охоплює широкий спектр дисциплін – від класичного живопису до сучасних дизайнерських технік.</p>
+
 <p>Студенти мають доступ до сучасних майстерень і студій, що дозволяє втілювати найсміливіші художні ідеї в життя.</p>
 <p> Крім того, коледж активно співпрацює з провідними художніми інституціями та галереями, що відкриває перед нами безліч можливостей для розвитку і кар'єри. </p>
 </div>
@@ -236,7 +108,9 @@ font-size: 16px;
 <div class="text-center">
 <img src="images/113.jpg" alt="архітектура" class="img-fluid architecture-image rotate-animation">
 </div>
-
+</div>
+</div>
+</div>
 </section>
 <section id="visit">
 <div class="container">
@@ -247,6 +121,7 @@ font-size: 16px;
 <th>Ім'я</th>
 <th>Електронна пошта</th>
 <th>Контакти</th>
+<th></th>
 </tr>
 </thead>
 <tbody>
@@ -254,13 +129,12 @@ font-size: 16px;
 <td>Yana</td>
 <td>yana.kozak2016@gmail.com</td>
 <td>+ 380 96 79 50 841</td>
-<td><button class="btn btn-primary" style="background-color: rgb(99, 92, 101);" onclick="bookTour(this)">Надіслати</button></td>
+<td><button class="btn btn-primary" onclick="bookTour(this)">Надіслати</button></td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
-        
 <section id="location" style="background-color: rgb(144, 148, 167);">
 <div class="container">
 <h2 class="section-title text-center">Розташування коледжу</h2>
@@ -283,45 +157,14 @@ font-size: 16px;
 <div class="social-icons">
 <h3 style="font-family: 'Play', sans-serif;">Слідкуй за мною:</h3>
 <a href="#"><img src="images/inst.png" alt="Instagram" style="margin-right: 10px;"></a>
- <a href="#"><img src="images/pngwing.com1.png" alt="Behance" style="margin-right: 10px;"></a>
+<a href="#"><img src="images/pngwing.com1.png" alt="Behance" style="margin-right: 10px;"></a>
 <a href="#"><img src="images/pngfind.com-twitter-png-logo-530160.png" alt="Twitter" style="margin-right: 10px;"></a>
+</div>
+</div>
 </footer>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-const gallery = document.querySelector('.gallery');
-const galleryPhotos = document.querySelectorAll('.gallery-photo');
-const arrowLeft = document.querySelector('.arrow-left');
-const arrowRight = document.querySelector('.arrow-right');
-let currentIndex = 0;
-const maxIndex = galleryPhotos.length - 1;
-
-function showPhoto(index) {
- if (index < 0) {
-currentIndex = maxIndex;
-} else if (index > maxIndex) {
-currentIndex = 0;
-} else {
-currentIndex = index;
-}
-const offset = -currentIndex * 100;
-gallery.style.transform = `translateX(${offset}%)`;
-}
-function zoomIn() {
-var map = document.getElementById("castle-map");
-var transform = map.style.transform;
-var scale = parseFloat(transform.match(/(\d+(\.\d+)?)/g)[0]);
-map.style.transform = "scale(" + (scale + 0.1) + ")";
-}
-arrowLeft.addEventListener('click', () => {
-showPhoto(currentIndex - 1);
-});
-arrowRight.addEventListener('click', () => {
- showPhoto(currentIndex + 1);
- });
-</script>
+<script src="js/jquery-3.5.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
 </body>
 </html>
-
