@@ -1,0 +1,33 @@
+const gallery = document.querySelector('.gallery');
+const galleryPhotos = document.querySelectorAll('.gallery-photo');
+const arrowLeft = document.querySelector('.arrow-left');
+const arrowRight = document.querySelector('.arrow-right');
+let currentIndex = 0;
+const maxIndex = galleryPhotos.length - 1;
+
+function showPhoto(index) {
+ if (index < 0) {
+  currentIndex = maxIndex;
+ } else if (index > maxIndex) {
+  currentIndex = 0;
+ } else {
+  currentIndex = index;
+ }
+ const offset = -currentIndex * 100;
+ gallery.style.transform = `translateX(${offset}%)`;
+}
+
+function zoomIn() {
+ var map = document.getElementById("castle-map");
+ var transform = map.style.transform;
+ var scale = parseFloat(transform.match(/(\d+(\.\d+)?)/g)[0]);
+ map.style.transform = "scale(" + (scale + 0.1) + ")";
+}
+
+arrowLeft.addEventListener('click', () => {
+  showPhoto(currentIndex - 1);
+});
+
+arrowRight.addEventListener('click', () => {
+  showPhoto(currentIndex + 1);
+});
