@@ -1,0 +1,102 @@
+body {
+    font-family: 'Play', sans-serif;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+}
+
+header .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.welcome-animation {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.about-image {
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.gallery-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-photo {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+.arrow {
+    cursor: pointer;
+    font-size: 2em;
+    color: #333;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+.arrow-left {
+    left: 10px;
+}
+
+.arrow-right {
+    right: 10px;
+}
+
+.rotate-animation {
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.table {
+    margin: 20px 0;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+.map-container {
+    text-align: center;
+    margin-top: 20px;
+}
